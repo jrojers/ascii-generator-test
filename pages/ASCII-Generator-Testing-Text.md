@@ -44,10 +44,21 @@ Then I should see my text transformed into ASCII text in the font I choose,
 ###### Example Test Implementation
 ```ruby
 describe 'ASCII Generator Text Conversion -' do
-  it 'should convert text with chosen font to ASCII art' do
-    page.load('http://www.ascii-art-generator.org/')
-    page.findElement(driver.By.name("banner_text")).sendKeys("HELLO");
+  it "can generate ASCII art preview" do
+    @driver.navigate.to "http://www.ascii-art-generator.org/"
+  
+    raise "Unable to load Generator." unless @driver.title.include? "Online ASCII Art Creator"
+  
+    examples.each do |ex|
+          (@driver.find_element :name, "art_type").select(3) # select Text to Ascii Art Banner
+          (@driver.find_element :name, "banner_text").send_keys "HELLO"
+          (@driver.find_element :name, "submit").click()
+
+          banner_text = (@driver.find_element :id, "result-preview-wrap").getText()
+          expect(banner_text).to eq(ex['expected_result'])
+    end
   end
+end
 ```
 
 ----
