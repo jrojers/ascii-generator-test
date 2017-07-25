@@ -3,7 +3,10 @@
 
 #### Validate Text Input
 ```ruby
-Given I am a visitor, when I provide valid text to the generator, I should see my text transformed into ASCII text in the font I choose, with the ability to download the result as text. 
+Given I am a visitor
+When I provide valid text to the generator
+Then I should see my text transformed into ASCII text in the font I choose, 
+      with the ability to download the result as text
 ```
 | Test Identifier | Text Input | Font | Assertion |
 | --------- | ----- | ----- | --------- |
@@ -38,8 +41,20 @@ Given I am a visitor, when I provide valid text to the generator, I should see m
         5. Verify option to download txt file
         6. Download file and verify size and contents
 
+###### Example Test Implementation
 ```ruby
-Given I am a visitor, when I provide invalid text to the generator, I should be informed that I provided invalid input, and to try again. 
+describe 'ASCII Generator Text Conversion -' do
+  it 'should convert text with chosen font to ASCII art' do
+    page.load('http://www.ascii-art-generator.org/')
+    page.findElement(driver.By.name("banner_text")).sendKeys("HELLO");
+  end
+```
+
+----
+```ruby
+Given I am a visitor
+When I provide invalid text to the generator
+Then I should be informed that I provided invalid input, and to try again. 
 ```
 | Test Identifier | Input | Assertion |
 | --------- | ----- | --------- |
