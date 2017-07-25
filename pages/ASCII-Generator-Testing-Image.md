@@ -2,12 +2,36 @@
 * Automated tests should access a test version of the application, interact with the browser for inputs, and verify expected functionality.
 
 ```ruby
-Given I am a visitor, I should see options to choose to convert my image to monochrome ASCII art or color ASCII art, and I can only choose one option. 
+Given I am a visitor
+I should see options to choose to convert my image to monochrome ASCII art or color ASCII art
+    And I can only choose one option. 
 ```
+
+```ruby
+
+examples = { } #read in table of test inputs + expectations
+
+describe 'ASCII Generator Image Conversion -' do  
+  it "shows me options of Monochrome or color ASCII art, and I can only choose one" do
+    @driver.navigate.to "http://www.ascii-art-generator.org/"
+  
+    raise "Unable to load Generator." unless @driver.title.include? "Online ASCII Art Creator"
+
+    # Verify available Image conversion options
+    # Verify only one can be selected at a time
+  end
+end
+```
+
+
+----
 
 #### Validate Image Input (URL)
 ```ruby
-Given I am a visitor, when I choose to convert a valid image by url, I should see the image transformed into ASCII art, as well as options to dowload as Text, HTML, or SVG.
+Given I am a visitor
+When I choose to convert a valid image by url
+I should see the image transformed into ASCII art
+And be shown options to dowload as Text, HTML, or SVG
 ```
 | Test Identifier | URL Input | Assertion |
 | --------- | ----- | --------- |
@@ -15,8 +39,11 @@ Given I am a visitor, when I choose to convert a valid image by url, I should se
 | Https | https://imgur.com/testimage | Success |
 
 ```ruby
-Given I am a visitor, when I choose to convert an invalid image by url, I should be informed of my error and prompted to fix.
+Given I am a visitor
+When I choose to convert an invalid image by url
+I should be informed of my error and prompted to fix
 ```
+
 | Test Identifier | URL Input | Assertion |
 | --------- | ----- | --------- |
 | Invalid url | http://url with a space | Failure |
@@ -24,9 +51,13 @@ Given I am a visitor, when I choose to convert an invalid image by url, I should
 | Image too large | http://image>5M.jpg | Failure |
 | Empty image | http://empty_image.png | Failure |
 ----
+
 #### Validate Image Input (file extension)
 ```ruby
-Given I am a visitor, when I choose to convert a valid uploaded image, I should see the image transformed into ASCII art, as well as options to dowload as Text, HTML, or SVG.
+Given I am a visitor
+When I choose to convert a valid uploaded image
+I should see the image transformed into ASCII art
+And be shown options to dowload as Text, HTML, or SVG
 ```
 | Test Name | Image Input | Assertion |
 | --------- | ----- | --------- |
@@ -37,7 +68,10 @@ Given I am a visitor, when I choose to convert a valid uploaded image, I should 
 | Simple gif | file://simple.gif | Success |
 
 ```ruby
-Given I am a visitor, when I choose to convert an invalid uploaded image, I should see the image transformed into ASCII art, as well as options to dowload as Text, HTML, or SVG.
+Given I am a visitor
+When I choose to convert an invalid uploaded image
+I should see the image transformed into ASCII art
+And shown options to dowload as Text, HTML, or SVG.
 ```
 | Test Name | Image Input | Assertion |
 | --------- | ----- | --------- |
