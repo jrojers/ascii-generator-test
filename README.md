@@ -3,6 +3,9 @@
 ## Table of Contents
 1. [Build Quality In](./pages/ASCII-Build-Quality-In.md)
 2. [Testing Methodology](./pages/ASCII-Methodology.md)
+3. Test Strategies
+    * [Text Conversion](./pages/ASCII-Text-Conversion-Test-Strategy.md)
+    * [Image Conversion](./pages/ASCII-Image-Conversion-Test-Strategy.md)
 3. Functional Specifications
     * [Text => ASCII Art](./pages/ASCII-Generator-Testing-Text.md)
     * [Image => ASCII Art](./pages/ASCII-Generator-Testing-Image.md)
