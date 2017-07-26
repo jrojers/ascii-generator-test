@@ -31,7 +31,7 @@ And be shown options to dowload as Text, HTML, or SVG
 ```
 
 | Test Identifier | url | color | expected_results |
-| --------- | ----- | --------- |
+| --------- | ----- | ----- | --------- |
 | Simple monochrome url png| http://testimage.png | monochrome | expected/simple_monochrome_png.txt, expected/simple_monochrome_png.svg, expected/simple_monochrome_png.svg |
 | Simple color url png | http://testimage.png | color | expected/simple_color_png.txt, expected/simple_color_png.svg, expected/simple_color_png.svg |
 | Https monochrome png | https://imgur.com/testimage.png | monochrome | expected/https_monochrome_png.txt, expected/https_monochrome_png.svg, expected/https_monochrome_png.svg |
@@ -101,7 +101,7 @@ And be shown options to dowload as Text, HTML, or SVG
 ```
 
 | Test Name | image_input | color | expected_results |
-| --------- | ----- | --------- |
+| --------- | ----- | ----- | --------- |
 | Simple monochrome png | file://simple.png | monochrome | expected/simple_monochrome.txt, expected/simple_monochrome.svg, expected/simple_monochrome.svg |
 | Simple color png | file://simple.png | color | expected/simple_color.txt, expected/simple_color.svg, expected/simple_color.svg |
 | Simple monochrome jpg | file://simple.jpg | monochrome | expected/simple_monochrome.txt, expected/simple_monochrome.svg, expected/simple_monochrome.svg |
