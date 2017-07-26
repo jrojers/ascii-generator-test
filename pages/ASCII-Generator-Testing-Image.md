@@ -103,8 +103,8 @@ And be shown options to dowload as Text, HTML, or SVG
 | --------- | ----- | ----- | --------- |
 | Simple monochrome png | file://simple.png | monochrome | expected/simple_monochrome_png.txt, expected/simple_monochrome_png.svg, expected/simple_monochrome_png.svg |
 | Simple color png | file://simple.png | color | expected/simple_color_png.txt, expected/simple_color_png.svg, expected/simple_color_png.svg |
-| Simple monochrome jpg | file://simple.jpg | monochrome | expected/simple_monochrome_png.txt, expected/simple_monochrome_png.svg, expected/simple_monochrome_png.svg |
-| Simple color jpg | file://simple.jpg | color | expected/simple_color_png.txt, expected/simple_color_png.svg, expected/simple_color_png.svg |
+| Simple monochrome jpg | file://simple.jpg | monochrome | expected/simple_monochrome_jpg.txt, expected/simple_monochrome_jpg.svg, expected/simple_monochrome_jpg.svg |
+| Simple color jpg | file://simple.jpg | color | expected/simple_color_jpg.txt, expected/simple_color_jpg.svg, expected/simple_color_jpg.svg |
 
 .
 .
