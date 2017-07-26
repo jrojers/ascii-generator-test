@@ -6,6 +6,10 @@ Given I am a visitor
 I should see options to choose to convert my image to monochrome ASCII art or color ASCII art
     And I can only choose one option
 ```
+##### Example Test Implementation
+NOTE: There are several options available to interact with the browser. Something like Capybara or PhantomJS allow you to interact with a simulated browser, without a "real" browser taking over a machine. Real browsers are slow and unstable over thousands of tests per day. In this example I chose basic Webdriver, which utilizes a real browser.
+
+It is important to note that this example lives in the app repository, and would use the same test runner and reporting mechanisms that all unit (and other) tests use.
 
 ```ruby
 describe 'ASCII Generator Image Conversion -' do  
@@ -49,11 +53,6 @@ And be shown options to dowload as Text, HTML, or SVG
         1. Provide image to convert (via url or upload)
         1. Verify option to download txt, html, svg files
         1. Download files and verify contents
-
-##### Example Test Implementation
-NOTE: There are several options available to interact with the browser. Something like Capybara or PhantomJS allow you to interact with a simulated browser, without a "real" browser taking over a machine. Real browsers are slow and unstable over thousands of tests per day. In this example I chose basic Webdriver, which utilizes a real browser.
-
-It is important to note that this example lives in the app repository, and would use the same test runner and reporting mechanisms that all unit (and other) tests use.
 
 ```ruby
 
