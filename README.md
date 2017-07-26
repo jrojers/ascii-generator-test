@@ -6,10 +6,10 @@
 3. Test Strategies
     * [Text Conversion](./pages/ASCII-Text-Conversion-Test-Strategy.md)
     * [Image Conversion](./pages/ASCII-Image-Conversion-Test-Strategy.md)
-3. Functional Specifications
+3. Functional Testing
     * [Text => ASCII Art](./pages/ASCII-Generator-Testing-Text.md)
     * [Image => ASCII Art](./pages/ASCII-Generator-Testing-Image.md)
-4. [Non-functional Specifications](./pages/ASCII-Generator-Nonfunctionals.md)
+4. [Non-functional Testing](./pages/ASCII-Generator-Nonfunctionals.md)
 
 ## Assumptions
     a. The ASCII Art Generator lives in one primary code repository.
