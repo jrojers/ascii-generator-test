@@ -18,12 +18,6 @@
     * In this example, there are only a few preset options for font and input character types, so all comparisons can be built relatively easily. If more fonts or other inputs are introduced in the future, it may make sense to look at pairwise testing, to trim down the number of examples.
 
 ### Manual Verification
-  * As stated above, manual verification & sign-off is important for a whole host of reasons. Once a feature is deemed "accepted", we can now assume the text conversion outputs are golden, and can be used for long-term test automation purposes.
+  * As stated above, manual verification & sign-off is crucial. Once a feature is deemed "accepted", we can now assume the text conversion outputs are golden, and can be used for long-term test automation purposes.
   * Exploratory testing can be focused on new features + navigation, concurrency, etc. 
       - Examples: What happens if I use the browser back button, then forward, then backward? What happens if two people try to convert the same text at the same time?
-
-### Monkey testing (and other miscellaneous)
-  * use monkey testing to slam page with random inputs and checks for errors
-  * See Non-functionals
-  * Load
-  * Security
