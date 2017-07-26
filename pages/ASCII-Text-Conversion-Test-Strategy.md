@@ -8,7 +8,7 @@
         * Example:
           * Text input: "HELLO"
           * Verified output:
-          ![alt text](./images/hello.png "Hello")
+          ![alt text](../images/hello.png "Hello")
 
     * The above output can be saved as a file or in a variable to be read in at runtime
     * The input and expected result can be verified in automated tests continuously
