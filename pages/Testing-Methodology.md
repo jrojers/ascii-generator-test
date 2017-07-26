@@ -15,6 +15,7 @@ A well-rounded system testing strategy needs to focus on speed, stability, and r
     * Run local on the developer machine, as well as pre & post-merge in the Continuous Integration system.
     * Risks: Developer assumptions, known dataset.
     * Mitigations: Peer review on tests.
+    * *Failure fails the build*.
 
 * **Functional testing**: Demonstrable feature testing, via browser, api, etc. Owned by developer & qa/test.
     * Measured in seconds.
@@ -24,12 +25,16 @@ A well-rounded system testing strategy needs to focus on speed, stability, and r
     * Run local on the developer machine, via the browser or other external interface, pre & post-merge in the Continuous Integration system.
     * Risks: developer/tester assumptions, known dataset, flakiness, slows build.
     * Mitigations: Cross-functional sign-off on tests, set alert thresholds on test reliability and build performance.
+    * *Failure fails the build*.
+
 * **Feature performance testing**: Measure performance of features via tests that send metrics to a stats collector to graph performance over time.
     * Show performance graphs on Big TVs around the office, weekly reports, etc.
     * Run tests in every build, next to unit/functional tests.
     * Run local on the developer machine, as well as pre & post-merge in the Continuous Integration system.
     * Risks: Slows build, tests not executed on production infrastructure.
     * Mitigations: Peer review, alert thresholds on relative change in performance, not absolute measurements.
+    * *Failure... alerts.* We want to be careful about premature performance optimization. But the data is important to trend.
+
 
 ### Pre-production Testing
 ![alt text](https://docs.google.com/drawings/d/e/2PACX-1vQma-vBOPkOOYX48U3cQN2Lw7_GFbUOL86mzQuvcjEaWucQoKmZlykybGMqRlijoy8dw07QRdEIP3A4/pub?w=480&h=360 "Pre-production Testing")
@@ -39,6 +44,7 @@ A well-rounded system testing strategy needs to focus on speed, stability, and r
   * Real integrations with external services.
   * Share with internal experts, business experts for feedback on new features.
   * Scrubbed production dataset copy, refreshed weekly.
+  * *Critical functionality failure holds up a release.*
 
 * **Manual, exploratory testing**: Behavorial user testing, with empathy for end users.
     * Measured in defects found.
@@ -66,6 +72,7 @@ A well-rounded system testing strategy needs to focus on speed, stability, and r
     * Test assets live in application repository, unless a 3rd party is used (New Relic).
     * Risks: Using & creating test data in production, expensive to monitor/mitigate, developer/tester assumptions on user behavior.
     * Mitigations: Pre-emptive outreach to Business, Support, Data, etc.
+    * *Failure alerts Support, Ops, and cross-functional teams to assess and resolve*.
 
 * **Release validation**: Validate new features have made it to production successfully.
     * Cross-functional team, focus on new changes.
