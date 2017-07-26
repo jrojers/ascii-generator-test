@@ -30,3 +30,4 @@
   * See Non-functionals
   * Load
   * Security
+  * Hold onto image for 20+ minutes
