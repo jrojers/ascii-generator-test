@@ -10,7 +10,7 @@ Then I should see my text transformed into ASCII text in the font I choose,
 ```
 | Test Identifier | text_input | Font | expected_result |
 | --------- | ----- | ----- | --------- |
-| Simple Text Banner | HELLO | banner | expected/hello_banner.txt |
+| Simple Text Banner | HELLO | banner | [expected/hello_banner.txt](../expected/hello_banner.txt) |
 | Numbers Banner | 12234 | banner | expected/numbers_banner.txt |
 | Mixed Banner | 123halkdjhf13123adfjha | banner | expected/mixed_banner.txt |
 | Special characters Banner | 123*(*akjfd(& | banner | expected/special_banner.txt |
@@ -57,12 +57,13 @@ describe 'ASCII Generator Text Conversion -' do
     raise "Unable to load Generator." unless @driver.title.include? "Online ASCII Art Creator"
   
     examples.each do |ex|
+      expected = IO.read(ex['expected_result'])
       (@driver.find_element :name, "art_type").select(3) # select Text to Ascii Art Banner
       (@driver.find_element :name, "banner_text").send_keys ex['text_input']
       (@driver.find_element :name, "submit").click()
 
       banner_text = (@driver.find_element :id, "result-preview-wrap").getText()
-      expect(banner_text).to eq(ex['expected_result'])
+      expect(banner_text).to eq(expected)
     end
   end
   
