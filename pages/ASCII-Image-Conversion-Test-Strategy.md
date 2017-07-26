@@ -9,19 +9,16 @@
             - ![alt text](../images/tempus.jpg)
           * Verified output:
             - ![alt text](../images/tempus.png)
-        * Example:
-          * Text input: "image with text.jpg"
-          * Verified output:
-    * The above output is saved as a file to be read in at runtime.
-    * The input and expected result can be verified in automated tests continuously.
-    * There will be some legwork to initially set up the expected data, but the payoff will be immense for subsequent build verification.
+    * As long as the input image does not change, the output image should not change either. The only ways it would change are (a) an intentional system update/code change, or (b) a defect. 
+      - If it is (a), the input/output need to be validated manually again, and the test updated. 
+      - If it is (b), the test should fail and the defect investigated before merging the change.
+    * There will be some legwork to initially set up the expected data, but the payoff will be immense for subsequent build verifications.
     * In this example, there are only a few options for urls, uploaded images, and file types, so all comparisons can be built relatively easily.
 
 ### Manual Verification
-  * Long-term, we don't want manual testing to be a trusted and necessary step for launching (and maintaining) this feature. Most functional aspects of the feature can reasonably be covered in automated tests.
-  * There is a tremendous amount of value in exploratory testing pre-launch, as long as it as positioned as "cya" or "human eyes".
-  * Exploratory testing can be focused on things like navigation (what happens if i use the browser back button, then forward?)
-    * Obselete or old versions of browsers that a small number of users still use
+  * As stated above, manual verification & sign-off is important for a whole host of reasons. Once a feature is deemed "accepted", we can now assume the image conversion outputs are golden, and can be used for long-term test automation purposes.
+  * Exploratory testing can be focused on new features + navigation, concurrency, etc. 
+      - Examples: What happens if I use the browser back button, then forward, then backward? What happens if two people try to convert the same image at the same time?
 
 ### Monkey testing (and other miscellaneous)
   * use monkey testing to slam page with random inputs and checks for errors
