@@ -57,6 +57,7 @@ A well-rounded system testing strategy needs to focus on speed, stability, and r
 ![alt text](https://docs.google.com/drawings/d/e/2PACX-1vTnmNAmo0bWczGgfrsebD6KbODw8P3xuiPTN199ak8FIq4mGoSvpFLt8xdQHkUhp4pgYkn2JM5tHVbB/pub?w=480&h=360 "Production Testing")
 * Focus is on watching real user behaviors closely.
   * All defects cannot be found pre-release, and it is expensive to try.
+  * Don't be proud. Assume you missed something.
 
 * **Application testing**: Script bots to run automated tests against production application.
     * Black-box tests, focus on end-to-end functionality.
