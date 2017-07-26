@@ -101,10 +101,10 @@ And be shown options to dowload as Text, HTML, or SVG
 
 | Test Name | image_input | color | expected_results |
 | --------- | ----- | ----- | --------- |
-| Simple monochrome png | file://simple.png | monochrome | expected/simple_monochrome.txt, expected/simple_monochrome.svg, expected/simple_monochrome.svg |
-| Simple color png | file://simple.png | color | expected/simple_color.txt, expected/simple_color.svg, expected/simple_color.svg |
-| Simple monochrome jpg | file://simple.jpg | monochrome | expected/simple_monochrome.txt, expected/simple_monochrome.svg, expected/simple_monochrome.svg |
-| Simple color jpg | file://simple.jpg | color | expected/simple_color.txt, expected/simple_color.svg, expected/simple_color.svg |
+| Simple monochrome png | file://simple.png | monochrome | expected/simple_monochrome_png.txt, expected/simple_monochrome_png.svg, expected/simple_monochrome_png.svg |
+| Simple color png | file://simple.png | color | expected/simple_color_png.txt, expected/simple_color_png.svg, expected/simple_color_png.svg |
+| Simple monochrome jpg | file://simple.jpg | monochrome | expected/simple_monochrome_png.txt, expected/simple_monochrome_png.svg, expected/simple_monochrome_png.svg |
+| Simple color jpg | file://simple.jpg | color | expected/simple_color_png.txt, expected/simple_color_png.svg, expected/simple_color_png.svg |
 
 .
 .
