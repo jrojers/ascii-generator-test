@@ -9,17 +9,18 @@
           * Text input: "HELLO"
           * Verified output:
           ![alt text](../images/hello.png "Hello")
-
+    * As long as the input text does not change, the output text should not change either. The only ways it would change are (a) an intentional system update/code change, or (b) a defect. 
+      - If it is (a), the input/output need to be validated manually again, and the test updated. 
+      - If it is (b), the test should fail and the defect investigated before merging the change.
     * The above output can be saved as a file or in a variable to be read in at runtime.
     * The input and expected result can be verified in automated tests continuously.
     * There will be some legwork to initially set up the data, but the payoff will be immense for subsequent build verifications.
     * In this example, there are only a few preset options for font and input character types, so all comparisons can be built relatively easily. If more fonts or other inputs are introduced in the future, it may make sense to look at pairwise testing, to trim down the number of examples.
 
 ### Manual Verification
-  * Long-term, we do not want manual testing to be a trusted and necessary step for launching (and maintaining) this feature. Most functional aspects of the feature can reasonably be covered in automated tests.
-  * There is a tremendous amount of value in exploratory testing pre-launch, as long as it as positioned as "cya" or "human eyes".
-  * Exploratory testing can be focused on things like navigation (what happens if i use the browser back button, then forward?)
-    * Obselete or old versions of browsers that a small number of users still use
+  * As stated above, manual verification & sign-off is important for a whole host of reasons. Once a feature is deemed "accepted", we can now assume the text conversion outputs are golden, and can be used for long-term test automation purposes.
+  * Exploratory testing can be focused on new features + navigation, concurrency, etc. 
+      - Examples: What happens if I use the browser back button, then forward, then backward? What happens if two people try to convert the same text at the same time?
 
 ### Monkey testing (and other miscellaneous)
   * use monkey testing to slam page with random inputs and checks for errors
