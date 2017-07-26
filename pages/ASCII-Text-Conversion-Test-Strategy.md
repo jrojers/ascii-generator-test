@@ -8,15 +8,8 @@
         * Example:
           * Text input: "HELLO"
           * Verified output:
-          * ```txt
-          #     # ####### #       #       #######
-          #     # #       #       #       #     #
-          #     # #       #       #       #     #
-          ####### #####   #       #       #     #
-          #     # #       #       #       #     #
-          #     # #       #       #       #     #
-          #     # ####### ####### ####### #######
-          ```
+          ![alt text](./images/hello.png "Hello")
+
     * The above output can be saved as a file or in a variable to be read in at runtime
     * The input and expected result can be verified in automated tests continuously
     * There will be some legwork to initially set up the data, but the payoff will be immense for subsequent build verification
